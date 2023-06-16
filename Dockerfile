@@ -12,3 +12,5 @@ ENV MB_DB_PORT=$PGPORT
 ENV MB_DB_USER=$PGUSER
 ENV MB_DB_PASS=$PGPASSWORD
 ENV MB_DB_HOST=$PGHOST
+
+RUN curl --create-dirs -o $HOME/.postgresql/root.crt 'https://cockroachlabs.cloud/clusters/6845954f-17da-4e97-92c4-8ff4a48aabf8/cert'
